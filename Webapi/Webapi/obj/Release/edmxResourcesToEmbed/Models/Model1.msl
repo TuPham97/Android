@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DOANModelStoreContainer" CdmEntityContainer="DOANEntities2">
+    <EntitySetMapping Name="KHACHHANGs">
+      <EntityTypeMapping TypeName="DOANModel.KHACHHANG">
+        <MappingFragment StoreEntitySet="KHACHHANG">
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+          <ScalarProperty Name="USERNAME" ColumnName="USERNAME" />
+          <ScalarProperty Name="PASS" ColumnName="PASS" />
+          <ScalarProperty Name="HOTEN" ColumnName="HOTEN" />
+          <ScalarProperty Name="GIOITINH" ColumnName="GIOITINH" />
+          <ScalarProperty Name="NGAYSINH" ColumnName="NGAYSINH" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LICHCHIEUx">
+      <EntityTypeMapping TypeName="DOANModel.LICHCHIEU">
+        <MappingFragment StoreEntitySet="LICHCHIEU">
+          <ScalarProperty Name="MARAP" ColumnName="MARAP" />
+          <ScalarProperty Name="MASUAT" ColumnName="MASUAT" />
+          <ScalarProperty Name="MAPHIM" ColumnName="MAPHIM" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIMs">
+      <EntityTypeMapping TypeName="DOANModel.PHIM">
+        <MappingFragment StoreEntitySet="PHIM">
+          <ScalarProperty Name="MAPHIM" ColumnName="MAPHIM" />
+          <ScalarProperty Name="TENPHIM" ColumnName="TENPHIM" />
+          <ScalarProperty Name="HINHANH" ColumnName="HINHANH" />
+          <ScalarProperty Name="NGAYCONGCHIEU" ColumnName="NGAYCONGCHIEU" />
+          <ScalarProperty Name="MOTA" ColumnName="MOTA" />
+          <ScalarProperty Name="GIA" ColumnName="GIA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="QUANLYVEs">
+      <EntityTypeMapping TypeName="DOANModel.QUANLYVE">
+        <MappingFragment StoreEntitySet="QUANLYVE">
+          <ScalarProperty Name="MAVE" ColumnName="MAVE" />
+          <ScalarProperty Name="MASUAT" ColumnName="MASUAT" />
+          <ScalarProperty Name="MARAP" ColumnName="MARAP" />
+          <ScalarProperty Name="NGAYDAT" ColumnName="NGAYDAT" />
+          <ScalarProperty Name="MAGHE" ColumnName="MAGHE" />
+          <ScalarProperty Name="MAKH" ColumnName="MAKH" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAPs">
+      <EntityTypeMapping TypeName="DOANModel.RAP">
+        <MappingFragment StoreEntitySet="RAP">
+          <ScalarProperty Name="MARAP" ColumnName="MARAP" />
+          <ScalarProperty Name="SOGHE" ColumnName="SOGHE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUATCHIEUx">
+      <EntityTypeMapping TypeName="DOANModel.SUATCHIEU">
+        <MappingFragment StoreEntitySet="SUATCHIEU">
+          <ScalarProperty Name="MASUAT" ColumnName="MASUAT" />
+          <ScalarProperty Name="GIOBATDAU" ColumnName="GIOBATDAU" />
+          <ScalarProperty Name="GIOKETTHUC" ColumnName="GIOKETTHUC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

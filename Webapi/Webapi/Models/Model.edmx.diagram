@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cd3352d323cf4feb8daf2d6b06de6688" Name="Diagram1">
+        <EntityTypeShape EntityType="DOANModel.KHACHHANG" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOANModel.LICHCHIEU" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOANModel.PHIM" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOANModel.QUANLYVE" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOANModel.RAP" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DOANModel.SUATCHIEU" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="DOANModel.FK__QUANLYVE__MAKH__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="DOANModel.FK__LICHCHIEU__MAPHI__1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="DOANModel.FK__LICHCHIEU__MARAP__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="DOANModel.FK__LICHCHIEU__MASUA__1BFD2C07" ManuallyRouted="false" />
+        <AssociationConnector Association="DOANModel.FK__QUANLYVE__1CF15040" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#4682B4"
+    >
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên phim:" />
+
+            <TextView
+                android:id="@+id/txtTenphim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suất chiếu" />
+
+            <Spinner
+                android:id="@+id/spinnerSuat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/suatchieu"/>
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            <TextView
+                android:id="@+id/tvRap"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Rạp"/>
+            <Spinner
+                android:id="@+id/spinnerRap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            />
+
+        </TableRow>
+    </TableLayout>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="100dp"
+        android:paddingLeft="35dp"
+        >
+        <Button
+            android:layout_height="40dp"
+            android:layout_width="320dp"
+            android:text="MÀN HÌNH"
+            android:textColor="@color/colorAccent"
+            android:backgroundTint="#ffffff"/>
+    </TableRow>
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="180dp"
+        android:paddingLeft="45dp"
+        >
+        <TableRow>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v1"
+                android:text="1"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v2"
+                android:text="2"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v3"
+                android:text="3"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v4"
+                android:text="4"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v5"
+                android:text="5"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v6"
+                android:text="6"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v7"
+                android:text="7"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v8"
+                android:text="8"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v9"
+                android:text="9"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v10"
+                android:text="10"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v11"
+                android:text="11"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v12"
+                android:text="12"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v13"
+                android:text="13"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v14"
+                android:text="14"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v15"
+                android:text="15"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v16"
+                android:text="16"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v17"
+                android:text="17"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v18"
+                android:text="18"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v19"
+                android:text="19"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+            <Button
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                android:backgroundTint="@color/colorWhite"
+                android:id="@+id/v20"
+                android:text="20"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+        </TableRow>
+
+    </TableLayout>
+
+    <TableRow
+        android:id="@+id/e"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingLeft="140dp"
+        android:paddingTop="450dp">
+
+        <Button
+            android:id="@+id/btnDatve"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="Đặt vé" />
+    </TableRow>
+</android.support.constraint.ConstraintLayout>

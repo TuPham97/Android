@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ĐẶT VÉ XEM PHIM HUTECH</string>
+    <string name="tenphim">Tên phim </string>
+    <string-array name="suatchieu">
+        <item name="1">7h00-9h00</item>
+        <item name="2">9h30-11h30</item>
+        <item name="3">12h00-14h00</item>
+        <item name="4">14h30-16h30</item>
+        <item name="5">17h00-19h00</item>
+        <item name="6">19h30-21h30   </item>
+        <item name="7">22h00-0h00</item>
+    </string-array>
+    <string-array name="rap">
+        <item name="Rap1">Rạp 1</item>
+        <item name="Rap2">Rạp2</item>
+        <item name="Rap3">Rạp 3</item>
+        <item name="Rap4">Rạp 4</item>
+        <item name="Rap5">Rạp 5</item>
+        <item name="Rap6">Rạp 6</item>
+        <item name="Rap7">Rạp 7</item>
+        <item name="Rap8">Rạp 8</item>
+    </string-array>
+
+    <string-array name="array1">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="array2">
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+
+    <string-array name="array3">
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+    <string-array name="array4">
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+
+    <string name="tenphimrap12">AQUAMAN: ĐẾ VƯƠNG ATLANTIS</string>
+    <string name="tenphimrap34">BÍ KÍP LUYỆN RỒNG: VÙNG ĐẤT BÍ ẨN</string>
+    <string name="tenphimrap56">ĐẠI ÚY MARVEL</string>
+    <string name="tenphimrap78">TOY STORY 4
+</string>
+
+</resources>

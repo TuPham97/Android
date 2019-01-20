@@ -1,0 +1,30 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:padding="8dp">
+    <TextView
+        android:id="@+id/id"
+        android:text="ID: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView
+        android:id="@+id/hoten"
+        android:text="Họ và tên: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/id"/>
+    <TextView
+        android:id="@+id/dt"
+        android:text="Điện thoại: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hoten"/>
+    <TextView
+    android:id="@+id/ngaysinh"
+    android:text="Ngày sinh: "
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/dt"/>
+</RelativeLayout>

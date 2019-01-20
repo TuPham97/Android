@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DOANModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="KHACHHANG">
+    <Key>
+      <PropertyRef Name="MAKH" />
+    </Key>
+    <Property Name="MAKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="USERNAME" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="PASS" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="HOTEN" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GIOITINH" Type="Boolean" />
+    <Property Name="NGAYSINH" Type="DateTime" Precision="0" />
+    <Property Name="SDT" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="QUANLYVEs" Relationship="Self.FK__QUANLYVE__MAKH__1DE57479" FromRole="KHACHHANG" ToRole="QUANLYVE" />
+  </EntityType>
+  <EntityType Name="LICHCHIEU">
+    <Key>
+      <PropertyRef Name="MARAP" />
+      <PropertyRef Name="MASUAT" />
+    </Key>
+    <Property Name="MARAP" Type="Int32" Nullable="false" />
+    <Property Name="MASUAT" Type="Int32" Nullable="false" />
+    <Property Name="MAPHIM" Type="Int32" />
+    <NavigationProperty Name="PHIM" Relationship="Self.FK__LICHCHIEU__MAPHI__1A14E395" FromRole="LICHCHIEU" ToRole="PHIM" />
+    <NavigationProperty Name="RAP" Relationship="Self.FK__LICHCHIEU__MARAP__1B0907CE" FromRole="LICHCHIEU" ToRole="RAP" />
+    <NavigationProperty Name="SUATCHIEU" Relationship="Self.FK__LICHCHIEU__MASUA__1BFD2C07" FromRole="LICHCHIEU" ToRole="SUATCHIEU" />
+    <NavigationProperty Name="QUANLYVEs" Relationship="Self.FK__QUANLYVE__1CF15040" FromRole="LICHCHIEU" ToRole="QUANLYVE" />
+  </EntityType>
+  <EntityType Name="PHIM">
+    <Key>
+      <PropertyRef Name="MAPHIM" />
+    </Key>
+    <Property Name="MAPHIM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TENPHIM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HINHANH" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NGAYCONGCHIEU" Type="DateTime" Precision="0" />
+    <Property Name="MOTA" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GIA" Type="Int64" />
+    <NavigationProperty Name="LICHCHIEUx" Relationship="Self.FK__LICHCHIEU__MAPHI__1A14E395" FromRole="PHIM" ToRole="LICHCHIEU" />
+  </EntityType>
+  <EntityType Name="QUANLYVE">
+    <Key>
+      <PropertyRef Name="MAVE" />
+    </Key>
+    <Property Name="MAVE" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MASUAT" Type="Int32" />
+    <Property Name="MARAP" Type="Int32" />
+    <Property Name="NGAYDAT" Type="DateTime" Precision="0" />
+    <Property Name="MAGHE" Type="Int32" />
+    <Property Name="MAKH" Type="Int32" />
+    <NavigationProperty Name="KHACHHANG" Relationship="Self.FK__QUANLYVE__MAKH__1DE57479" FromRole="QUANLYVE" ToRole="KHACHHANG" />
+    <NavigationProperty Name="LICHCHIEU" Relationship="Self.FK__QUANLYVE__1CF15040" FromRole="QUANLYVE" ToRole="LICHCHIEU" />
+  </EntityType>
+  <EntityType Name="RAP">
+    <Key>
+      <PropertyRef Name="MARAP" />
+    </Key>
+    <Property Name="MARAP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SOGHE" Type="Int32" />
+    <NavigationProperty Name="LICHCHIEUx" Relationship="Self.FK__LICHCHIEU__MARAP__1B0907CE" FromRole="RAP" ToRole="LICHCHIEU" />
+  </EntityType>
+  <EntityType Name="SUATCHIEU">
+    <Key>
+      <PropertyRef Name="MASUAT" />
+    </Key>
+    <Property Name="MASUAT" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GIOBATDAU" Type="Time" Precision="7" />
+    <Property Name="GIOKETTHUC" Type="Time" Precision="7" />
+    <NavigationProperty Name="LICHCHIEUx" Relationship="Self.FK__LICHCHIEU__MASUA__1BFD2C07" FromRole="SUATCHIEU" ToRole="LICHCHIEU" />
+  </EntityType>
+  <Association Name="FK__QUANLYVE__MAKH__1DE57479">
+    <End Role="KHACHHANG" Type="Self.KHACHHANG" Multiplicity="0..1" />
+    <End Role="QUANLYVE" Type="Self.QUANLYVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KHACHHANG">
+        <PropertyRef Name="MAKH" />
+      </Principal>
+      <Dependent Role="QUANLYVE">
+        <PropertyRef Name="MAKH" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LICHCHIEU__MAPHI__1A14E395">
+    <End Role="PHIM" Type="Self.PHIM" Multiplicity="0..1" />
+    <End Role="LICHCHIEU" Type="Self.LICHCHIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIM">
+        <PropertyRef Name="MAPHIM" />
+      </Principal>
+      <Dependent Role="LICHCHIEU">
+        <PropertyRef Name="MAPHIM" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LICHCHIEU__MARAP__1B0907CE">
+    <End Role="RAP" Type="Self.RAP" Multiplicity="1" />
+    <End Role="LICHCHIEU" Type="Self.LICHCHIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RAP">
+        <PropertyRef Name="MARAP" />
+      </Principal>
+      <Dependent Role="LICHCHIEU">
+        <PropertyRef Name="MARAP" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__LICHCHIEU__MASUA__1BFD2C07">
+    <End Role="SUATCHIEU" Type="Self.SUATCHIEU" Multiplicity="1" />
+    <End Role="LICHCHIEU" Type="Self.LICHCHIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SUATCHIEU">
+        <PropertyRef Name="MASUAT" />
+      </Principal>
+      <Dependent Role="LICHCHIEU">
+        <PropertyRef Name="MASUAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__QUANLYVE__1CF15040">
+    <End Role="LICHCHIEU" Type="Self.LICHCHIEU" Multiplicity="0..1" />
+    <End Role="QUANLYVE" Type="Self.QUANLYVE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LICHCHIEU">
+        <PropertyRef Name="MARAP" />
+        <PropertyRef Name="MASUAT" />
+      </Principal>
+      <Dependent Role="QUANLYVE">
+        <PropertyRef Name="MARAP" />
+        <PropertyRef Name="MASUAT" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DOANEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="KHACHHANGs" EntityType="Self.KHACHHANG" />
+    <EntitySet Name="LICHCHIEUx" EntityType="Self.LICHCHIEU" />
+    <EntitySet Name="PHIMs" EntityType="Self.PHIM" />
+    <EntitySet Name="QUANLYVEs" EntityType="Self.QUANLYVE" />
+    <EntitySet Name="RAPs" EntityType="Self.RAP" />
+    <EntitySet Name="SUATCHIEUx" EntityType="Self.SUATCHIEU" />
+    <AssociationSet Name="FK__QUANLYVE__MAKH__1DE57479" Association="Self.FK__QUANLYVE__MAKH__1DE57479">
+      <End Role="KHACHHANG" EntitySet="KHACHHANGs" />
+      <End Role="QUANLYVE" EntitySet="QUANLYVEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LICHCHIEU__MAPHI__1A14E395" Association="Self.FK__LICHCHIEU__MAPHI__1A14E395">
+      <End Role="PHIM" EntitySet="PHIMs" />
+      <End Role="LICHCHIEU" EntitySet="LICHCHIEUx" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LICHCHIEU__MARAP__1B0907CE" Association="Self.FK__LICHCHIEU__MARAP__1B0907CE">
+      <End Role="RAP" EntitySet="RAPs" />
+      <End Role="LICHCHIEU" EntitySet="LICHCHIEUx" />
+    </AssociationSet>
+    <AssociationSet Name="FK__LICHCHIEU__MASUA__1BFD2C07" Association="Self.FK__LICHCHIEU__MASUA__1BFD2C07">
+      <End Role="SUATCHIEU" EntitySet="SUATCHIEUx" />
+      <End Role="LICHCHIEU" EntitySet="LICHCHIEUx" />
+    </AssociationSet>
+    <AssociationSet Name="FK__QUANLYVE__1CF15040" Association="Self.FK__QUANLYVE__1CF15040">
+      <End Role="LICHCHIEU" EntitySet="LICHCHIEUx" />
+      <End Role="QUANLYVE" EntitySet="QUANLYVEs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
